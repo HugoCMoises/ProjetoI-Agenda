@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #edf2f7;
+}
+
+.container {
+    width: min(1050px, 92%);
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.topo {
+    margin-bottom: 24px;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #0f172a;
+}
+
+.topo p {
+    margin: 8px 0 0;
+    color: #64748b;
+}
+
+.area-agenda {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.formulario,
+.lista {
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.formulario input {
+    margin-bottom: 16px;
+}
+
+input:focus {
+    outline: 2px solid #38bdf8;
+    border-color: #0284c7;
+}
+
+button {
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#botaoSalvar,
+#botaoBuscar {
+    background: #0f766e;
+    color: #ffffff;
+}
+
+.secundario {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.botoes-form {
+    display: grid;
+    grid-template-columns: 1fr 90px;
+    gap: 10px;
+}
+
+.lista-topo {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.lista h2 {
+    margin: 0;
+}
+
+.busca {
+    display: grid;
+    grid-template-columns: 1fr 90px;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.mensagem {
+    min-height: 22px;
+    margin-bottom: 12px;
+    color: #b45309;
+    font-size: 14px;
+}
+
+.mensagem.sucesso {
+    color: #047857;
+}
+
+.contato {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.contato:last-child {
+    border-bottom: 0;
+}
+
+.contato strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #0f172a;
+}
+
+.contato span {
+    display: block;
+    color: #475569;
+    font-size: 14px;
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.editar {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.excluir {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+@media (max-width: 760px) {
+    .area-agenda {
+        grid-template-columns: 1fr;
+    }
+
+    .topo h1 {
+        font-size: 30px;
+    }
+
+    .contato {
+        flex-direction: column;
+    }
+
+    .acoes {
+        justify-content: flex-start;
+    }
+}
