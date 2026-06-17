@@ -1,4 +1,4 @@
-package br.com.agenda.exception;
+package exception;
 
 public class CampoVazioException extends RuntimeException {
     public CampoVazioException(String mensagem) {

@@ -1,17 +1,12 @@
--- Pelo terminal psql, este arquivo pode ser rodado inteiro.
--- No pgAdmin, rode primeiro o CREATE DATABASE, depois conecte no banco
--- agenda_telefonica e execute a partir do DROP TABLE.
-
+-- Primeiro execute esta linha em uma conexao normal do PostgreSQL.
 CREATE DATABASE agenda_telefonica;
 
-\c agenda_telefonica;
-
+-- Depois conecte no banco agenda_telefonica e execute o restante.
 DROP TABLE IF EXISTS contatos;
 
 CREATE TABLE contatos (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    telefone VARCHAR(11) NOT NULL,
+    nome VARCHAR(100) PRIMARY KEY,
+    telefone VARCHAR(20) NOT NULL,
     email VARCHAR(100) NOT NULL
 );
 

@@ -1,7 +1,6 @@
-package br.com.agenda.model;
+package model;
 
 public class Contato {
-    private Integer id;
     private String nome;
     private String telefone;
     private String email;
@@ -13,21 +12,6 @@ public class Contato {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-    }
-
-    public Contato(Integer id, String nome, String telefone, String email) {
-        this.id = id;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -56,8 +40,7 @@ public class Contato {
 
     @Override
     public String toString() {
-        return "ID: " + id
-                + " | Nome: " + nome
+        return "Nome: " + nome
                 + " | Telefone: " + telefone
                 + " | Email: " + email;
     }
