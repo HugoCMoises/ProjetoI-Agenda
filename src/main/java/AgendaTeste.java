@@ -31,8 +31,7 @@ public class AgendaTeste {
             } catch (CampoVazioException | ContatoNaoEncontradoException | IllegalArgumentException e) {
                 System.out.println("Erro: " + e.getMessage());
             } catch (RuntimeException e) {
-                System.out.println("Erro: nao foi possivel concluir a operacao.");
-                System.out.println("Confira se o banco de dados esta criado e conectado.");
+                System.out.println("Erro: " + e.getMessage());
             }
 
         } while (opcao != 5);

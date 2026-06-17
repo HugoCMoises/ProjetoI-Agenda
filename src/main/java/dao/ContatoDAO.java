@@ -26,7 +26,7 @@ public class ContatoDAO {
             stmt.executeUpdate();
 
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao inserir contato no banco de dados.");
+            throw new RuntimeException("Erro ao inserir contato no banco de dados: " + e.getMessage());
         }
     }
 
@@ -40,7 +40,7 @@ public class ContatoDAO {
             return stmt.executeUpdate() > 0;
 
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao remover contato do banco de dados.");
+            throw new RuntimeException("Erro ao remover contato do banco de dados: " + e.getMessage());
         }
     }
 
@@ -64,7 +64,7 @@ public class ContatoDAO {
             return Optional.empty();
 
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao buscar contato no banco de dados.");
+            throw new RuntimeException("Erro ao buscar contato no banco de dados: " + e.getMessage());
         }
     }
 
@@ -87,7 +87,7 @@ public class ContatoDAO {
             return contatos;
 
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao listar contatos do banco de dados.");
+            throw new RuntimeException("Erro ao listar contatos do banco de dados: " + e.getMessage());
         }
     }
 }
